@@ -7,7 +7,6 @@ tags:
 
 categories:
   - [博客]
-  - [干货]
 
 reward: true
 comment: true
@@ -21,7 +20,9 @@ comment: true
 
 ## Markdown 的创始人
 
-![Aaron Swartz 大神照片](/images/people/Aaron_Swartz.jpg "Aaron Swartz 大神照片")
+![Aaron Swartz 大神照片](/images/people/Aaron_Swartz.jpg)
+
+<center>Aaron Swartz 大神照片</center>
 
 ## <!-- > Aaron Swartz 大神照片 -->
 
@@ -120,11 +121,11 @@ $(document).ready(function () {
 
 ```markdown
 > 我是第一级引用
->
+
 > > 我是第二级引用
-> >
+
 > > > 我是第三级引用
-> > >
+
 > > > > ...
 ```
 
