@@ -3,11 +3,12 @@ title: 使用uni-app遇见的坑-4
 date: 2019-09-27 10:38:27
 
 tags:
-- webApp
-- uni-app
+  - 前端
+  - 多端开发
+  - uni-app
 
-categories: 
-- [前端]
+categories:
+  - [uni-app]
 
 reward: true
 comment: true
@@ -15,15 +16,16 @@ comment: true
 
 在使用 uni-app 开发 webApp 的时候，总会遇见或多或小的坑
 
-> uni-app中使用父子组件,子组件中的 *onLoad* , *onShow* 方法不执行
+> uni-app 中使用父子组件,子组件中的 _onLoad_ , _onShow_ 方法不执行
 
 <!-- more -->
 
 ## 问题
 
-*如上所说*
+_如上所说_
 
 ## 解决方法（仅供参考）
+
 自己研究了一下，发现子组件可以使用 Vue 的 created() 生命周期，或者通过事件通知子组件。
 
 `暂时解决方法就是子组件使用 Vue 的生命周期，可能官方以后出新规则呢~`

@@ -9,7 +9,7 @@ description: You are what you sad
 keywords: lowkey-lau,lowkey-lau.site,Lowkey,lowkey,Uniapp,前端,博客,个人博客,刘俊杭,dapp,链游,web3,tronWeb,区块链
 author: 刘俊杭 (lowkey-lau)
 language: zh-CN
-timezone: ''
+timezone: ""
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -39,31 +39,31 @@ titlecase: false # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
   field: site # Apply to the whole site
-  exclude: ''
+  exclude: ""
 filename_case: 0
 render_drafts: false
 post_asset_folder: true
 relative_link: false
 future: true
 highlight:
-  enable: true
-  line_number: true
+  enable: false
+  line_number: false
   auto_detect: false
-  tab_replace: ''
-  wrap: true
+  tab_replace: ""
+  wrap: false
   hljs: false
 prismjs:
-  enable: false
+  enable: true
   preprocess: true
-  line_number: true
-  tab_replace: ''
+  line_number: false
+  tab_replace: ""
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: ""
   per_page: 10
   order_by: -date
 
@@ -83,7 +83,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
-updated_option: 'mtime'
+updated_option: "mtime"
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -104,9 +104,10 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-- type: git
-  repo: git@github.com:lowkey-lau/lowkey-lau.github.io.git
-  branch: master
-# - type: git
-#   repo: git@e.coding.net:lowkey-lau/lowkey-laugerenboke/lowkey-lau.git
-#   branch: coding-pages
+  - type: git
+    repo: git@github.com:lowkey-lau/lowkey-lau.github.io.git
+    branch: master
+  # - type: git
+  #   repo: https://gitee.com/lowkey_lau/lowkey_blog.git
+  #   branch: master
+  #   token: e6b26be33409ec6dd81bdc9b3cb0cdef
