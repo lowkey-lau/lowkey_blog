@@ -1,5 +1,5 @@
 ---
-title: Markdown 写法记录
+title: Markdown 基础写法
 date: 2019-09-06 16:58:52
 
 tags:
@@ -12,7 +12,7 @@ reward: true
 comment: true
 ---
 
-> 开始记录博客了，可 Hexo 编写的文章使用 Markdown 的写法，因此在这里记录一下 Markdown 的写法
+> Hexo 编写文章的方式使用 `Markdown` 的写法，因此开一篇文章来记录下相关语法
 
 <!-- more -->
 

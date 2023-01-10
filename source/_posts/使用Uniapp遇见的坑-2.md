@@ -29,7 +29,7 @@ comment: true
 找了找资料发现这里确实存在着一些小坑，在[uniapp 官网](https://uniapp.dcloud.io/use?id=%e5%91%bd%e5%90%8d%e9%99%90%e5%88%b6)有记载，**命名方式存在限制**。
 
 在 uni-app 中以下这些作为保留关键字，不可作为组件名。
-`a, canvas, cell, content, countdown, datepicker, div, element, embed, header, image, img, indicator, input, link, list, loading-indicator, loading, marquee, meta, refresh, richtext, script, scrollable, scroller, select, slider-neighbor, slider, slot, span, spinner, style, svg, switch, tabbar, tabheader, template, text, textarea, timepicker, trisition-group, trisition, video, view, web, Tips`
+`a、canvas、cell、content、countdown、datepicker、div、element、embed、header、image、img、indicator、input、link、list、loading-indicator、loading、marquee、meta、refresh、richtext、script、scrollable、scroller、select、slider-neighbor、slider、slot、span、spinner、style、svg、switch、tabbar、tabheader、template、text、textarea、timepicker、transition-group、transition、video、view、web`
 
 _除以上列表中的名称外，标准的 HTML 及 SVG 标签名也不能作为组件名。_
 
