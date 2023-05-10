@@ -1,10 +1,11 @@
 ---
-title: Solidity常用语法、变量
+title: Solidity - 常用语法、变量
 date: 2023-01-05 16:00:00
 
 tags:
   - 区块链
   - Solidity
+  - Web3
 
 categories:
   - [区块链]

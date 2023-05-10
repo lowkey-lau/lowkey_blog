@@ -361,8 +361,8 @@ codeblock:
     light: base16/papercolor-light
     dark: base16/papercolor-light
   prism:
-    light: prism-dark.min
-    dark: prism-dark.min
+    light: prism
+    dark: prism
   # Add copy button on codeblock
   copy_button:
     enable: false
