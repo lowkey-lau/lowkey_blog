@@ -10,7 +10,7 @@ categories:
   - [笔记]
 
 reward: true
-comment: truex
+comment: true
 ---
 
 > 学习 **Python** 从我做起
@@ -18,8 +18,6 @@ comment: truex
 <!-- more -->
 
 ---
-
-
 
 ## 定义简单类的方法
 
@@ -32,11 +30,9 @@ class 类名:
        pass
 ```
 
-> _注意：_  **类名**  的命名规则要符合 **大驼峰命名法**，第一个参数必须为 **self**
+> _注意：_ **类名** 的命名规则要符合 **大驼峰命名法**，第一个参数必须为 **self**
 
 ---
-
-
 
 ## 初始化方法
 
@@ -47,14 +43,12 @@ class A:
     def __init__(self, num2):
         self.num = 100
         self.num2 = num2
-        
-        
+
+
 a = A(200)
 print(a.num) #100
 print(a.num2) #200
 ```
-
-
 
 ## 内置方法
 
@@ -67,20 +61,18 @@ class A:
     def __init__(self, name):
         self.name = name
         print('name is %s' % name)
-    
+
     def __del__(self):
         print('end')
-        
+
     def __str__(self):
         print('666')
-        
-        
+
+
 a = A('cat')
 print(a.name) #cat
 print(a) #666
 ```
-
-
 
 ## 私有属性和方法
 
@@ -92,18 +84,16 @@ class A:
 
     def test(self):
         print('test')
-    
+
     def __test(self):
         print('test')
-        
+
 a = A()
 print(a.num1) #100
 print(a.__num2) #报错
 a.test() #test
 a.__test() #报错
 ```
-
-
 
 ## 单继承
 
@@ -120,8 +110,6 @@ b = B()
 b.test() #test
 b.run() #run
 ```
-
-
 
 ## 重写
 
@@ -140,11 +128,9 @@ b = B()
 b.test() #run
 ```
 
-
-
 ## 扩展父类方法
 
-> **super()**  可以使用父类的方法
+> **super()** 可以使用父类的方法
 
 ```python
 class A:
@@ -159,8 +145,6 @@ class B(A):
 b = B()
 b.test() #run #test
 ```
-
-
 
 ## 多继承
 
@@ -187,8 +171,6 @@ c.test3() #test3
 
 > _注意：_ 尽量不要写同样的方法名，否则使用的时候会按先后顺序调用
 
-
-
 ## 多态
 
 > 不同的 **子类对象** 调用相同的 **父类方法**，产生不同的执行结果
@@ -211,7 +193,7 @@ class Xiaotianquan(Dog):
 class Person(object):
     def __init__(self,name) -> None:
         self.name = name
-    
+
     def game_with_dog(self, dog):
         print('%s 和 %s 玩耍' % (self.name, dog.name) )
 
@@ -222,8 +204,6 @@ wangcai = Xiaotianquan('旺财')
 xiaoming = Person('小明')
 xiaoming.game_with_dog(wangcai)
 ```
-
-
 
 ## 类
 
@@ -246,5 +226,62 @@ a = Tool('锤子')
 b = Tool('斧头')
 
 print(Tool.count)
+```
+
+## 类方法
+
+> **@classmethod** 是必带的
+>
+> 方法的第一个 **参数** 一定是 **cls** `class`的缩写，**哪一个类** 调用的方法，方法内的 class 就是 **哪一个类的引用**
+
+```python
+@classmethod
+def 类方法(cls):
+    pass
+```
+
+## 单例
+
+`__new__` 创建对象时，new 方法会被自动调用
+
+```python
+class Test:
+    instance = None
+
+    def __new__(cls):
+        print('创建对象，分配空间')
+
+        if cls.instance == None:
+            cls.instance =  super().__new__(cls)
+
+        return cls.instance
+
+test1 = Test()
+print(test1) #...456
+test2 = Test()
+print(test2) #...456
+```
+
+## 异常
+
+##### `捕获异常` 处理方法时捕获错误信息
+
+**Exception** 捕获所有异常错误
+
+```python
+try:
+    num = int(input('请输入一个整数：'))
+    result = 8 / num
+except ZeroDivisionError:
+    print('除0错误')
+except ValueError:
+    print('请输入正确的整数')
+    # 捕获所有错误类型
+except Exception as result:
+    print('未知错误 %s' % result)
+else:
+    print('正确输入，结果为 %s' % result)
+finally:
+    print('无论是否有异常，都会执行次代码')
 ```
 
