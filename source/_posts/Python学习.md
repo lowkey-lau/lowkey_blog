@@ -285,3 +285,37 @@ finally:
     print('无论是否有异常，都会执行次代码')
 ```
 
+**异常的传递**
+
+```python
+def demo1():
+    return int(input('输入整数：'))
+
+def demo2():
+    return demo1()
+
+try:
+    print(demo2())
+except Exception as result:
+    print('未知错误 %s' % result)
+```
+
+**抛出 raise 异常**
+
+```python
+def input_password():
+    pwd = input("请输入密码：")
+
+    if len(pwd) >= 8:
+        return pwd
+
+    print('主动抛出异常')
+    ex = Exception('密码长度不够')
+    raise ex
+
+try:
+    print(input_password())
+except Exception as result:
+    print(result)
+```
+
